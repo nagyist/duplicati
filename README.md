@@ -16,10 +16,8 @@ Removed Gitter
 -->
 
 [![Backers on Open Collective](https://opencollective.com/duplicati/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/duplicati/sponsors/badge.svg)](#sponsors) [![Build Status on Travis-CI](https://travis-ci.org/duplicati/duplicati.svg?branch=master)](https://travis-ci.org/duplicati/duplicati)
-[![Build status on AppVeyor](https://ci.appveyor.com/api/projects/status/h8s5nau9mn311hq0/branch/master?svg=true)](https://ci.appveyor.com/project/kenkendk/duplicati/branch/master)
-[![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=4870652)](https://www.bountysource.com/teams/duplicati?tracker_ids=4870652&utm_medium=shield&utm_campaign=TRACKER_BADGE)
 [![Coverage Status](https://coveralls.io/repos/github/duplicati/duplicati/badge.svg?branch=HEAD)](https://coveralls.io/github/duplicati/duplicati?branch=HEAD)
-[![License](https://img.shields.io/github/license/duplicati/duplicati.svg)](https://github.com/duplicati/duplicati/blob/master/LICENSE.txt)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/duplicati/duplicati/blob/master/LICENSE.txt)
 
 
 Duplicati is a free, open source, backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers. It works with:
@@ -96,14 +94,14 @@ Thank you to all our existing contributors:
 
 ## Backers
 
-Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/duplicati#backer)]
+Thank you to all our backers! 🙏
 
 <a href="https://opencollective.com/duplicati#backers" target="_blank"><img src="https://opencollective.com/duplicati/backers.svg?width=890"></a>
 
 
 ## Sponsors
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/duplicati#sponsor)]
+The list below reflects the sponsors who donated to the open-source project.
 
 <a href="https://opencollective.com/duplicati/sponsor/0/website" target="_blank"><img src="https://opencollective.com/duplicati/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/duplicati/sponsor/1/website" target="_blank"><img src="https://opencollective.com/duplicati/sponsor/1/avatar.svg"></a>

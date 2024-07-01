@@ -25,8 +25,6 @@ using System.IO;
 using System;
 using System.Collections.Generic;
 using System.Net;
-using System.Reflection;
-using Duplicati.Library.Utility;
 
 namespace Duplicati.UnitTest
 {
@@ -128,16 +126,24 @@ namespace Duplicati.UnitTest
 
         [Test]
         [Category("SVNData")]
-        public void TestWithSVNShort()
+        [TestCase("zip")]
+        [TestCase("7z")]
+        public void TestWithSVNShort(string compression)
         {
-            SVNCheckoutTest.RunTest(TestFolders.Take(5).ToArray(), TestOptions, TestTarget);
+            var opts = TestOptions;
+            opts["compression-module"] = compression;
+            SVNCheckoutTest.RunTest(TestFolders.Take(5).ToArray(), opts, TestTarget);
         }
-        
+
         [Test]
         [Category("SVNDataLong")]
-        public void TestWithSVNLong()
+        [TestCase("zip")]
+        [TestCase("7z")]
+        public void TestWithSVNLong(string compression)
         {
-            SVNCheckoutTest.RunTest(TestFolders.ToArray(), TestOptions, TestTarget);
+            var opts = TestOptions;
+            opts["compression-module"] = compression;
+            SVNCheckoutTest.RunTest(TestFolders.ToArray(), opts, TestTarget);
         }
 
         [Test]
@@ -147,6 +153,7 @@ namespace Duplicati.UnitTest
             var u = new Library.Utility.Uri(TestUtils.GetDefaultTarget());
             RandomErrorBackend.WrappedBackend = u.Scheme;
             var target = u.SetScheme(new RandomErrorBackend().ProtocolKey).ToString();
+            Library.DynamicLoader.BackendLoader.AddBackend(new RandomErrorBackend());
 
             SVNCheckoutTest.RunTest(TestFolders.Take(5).ToArray(), TestOptions, target);
         }
@@ -158,6 +165,7 @@ namespace Duplicati.UnitTest
             var u = new Library.Utility.Uri(TestUtils.GetDefaultTarget());
             SizeOmittingBackend.WrappedBackend = u.Scheme;
             var target = u.SetScheme(new SizeOmittingBackend().ProtocolKey).ToString();
+            Library.DynamicLoader.BackendLoader.AddBackend(new SizeOmittingBackend());
 
             SVNCheckoutTest.RunTest(TestFolders.Take(5).ToArray(), TestOptions, target);
         }

@@ -21,8 +21,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Text;
 
 namespace Duplicati.Library.Interface
 {
@@ -98,6 +96,7 @@ namespace Duplicati.Library.Interface
         /// </summary>
         /// <param name="file">The file to read the data from</param>
         /// <returns>A stream with data from the given file</returns>
+        /// <remarks>This method has slightly strange logic, in that it will return a null value if the file does not exist, instead of throwing an exception</remarks>
         System.IO.Stream OpenRead(string file);
 
         /// <summary>
@@ -143,7 +142,7 @@ namespace Duplicati.Library.Interface
     /// The other constructor is used to do the actual work.
     /// The input file may not exist or have zero length, in which case it should be created.
     /// </summary>
-    public interface ICompression : IDisposable, IArchiveReader, IArchiveWriter
+    public interface ICompression : IDynamicModule, IDisposable, IArchiveReader, IArchiveWriter
     {
         /// <summary>
         /// The total size of the archive.
@@ -164,10 +163,5 @@ namespace Duplicati.Library.Interface
         /// A localized description of the compression module
         /// </summary>
         string Description { get; }
-
-        /// <summary>
-        /// Gets a list of supported commandline arguments
-        /// </summary>
-        IList<ICommandLineArgument> SupportedCommands { get; }
     }
 }

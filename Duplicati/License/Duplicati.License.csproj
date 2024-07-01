@@ -22,14 +22,6 @@
       <Link>licenses\FluentFTP\License.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\thirdparty\gpg\Homepage.txt">
-      <Link>licenses\gpg\Homepage.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\thirdparty\gpg\License.txt">
-      <Link>licenses\gpg\License.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\..\thirdparty\Otp.NET\Homepage.txt">
       <Link>licenses\Otp.NET\Homepage.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -83,7 +75,8 @@
       <Link>licenses\license.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="licenses\duplicati-url.txt">
+    <Content Include="duplicati-url.txt">
+      <Link>licenses\duplicat-url.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\thirdparty\SSH.NET\Homepage.txt">
@@ -120,10 +113,6 @@
     </Content>
     <Content Include="..\..\thirdparty\AWS SDK\license.txt">
       <Link>licenses\AWSSDK\license.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\thirdparty\gpg\licensedata.json">
-      <Link>licenses\gpg\licensedata.json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\thirdparty\HttpServer\licensedata.json">
@@ -197,28 +186,16 @@
     <Content Include="acknowledgements.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\thirdparty\Sharp.Xmpp\download.txt">
-      <Link>licenses\Sharp.Xmpp\download.txt</Link>
+    <Content Include="..\..\thirdparty\Artalk.Xmpp\download.txt">
+      <Link>licenses\Artalk.Xmpp\download.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\thirdparty\Sharp.Xmpp\license.txt">
-      <Link>licenses\Sharp.Xmpp\license.txt</Link>
+    <Content Include="..\..\thirdparty\Artalk.Xmpp\license.txt">
+      <Link>licenses\Artalk.Xmpp\license.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\thirdparty\Sharp.Xmpp\licensedata.json">
-      <Link>licenses\Sharp.Xmpp\licensedata.json</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\thirdparty\ARSoft.Tools.Net\download.txt">
-      <Link>licenses\ARSoft.Tools.Net\download.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\thirdparty\ARSoft.Tools.Net\license.txt">
-      <Link>licenses\ARSoft.Tools.Net\license.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\thirdparty\ARSoft.Tools.Net\licensedata.json">
-      <Link>licenses\ARSoft.Tools.Net\licensedata.json</Link>
+    <Content Include="..\..\thirdparty\Artalk.Xmpp\licensedata.json">
+      <Link>licenses\Artalk.Xmpp\licensedata.json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\thirdparty\SharpAESCrypt\download.txt">
@@ -317,18 +294,6 @@
       <Link>licenses\MimeKit\licensedata.json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\thirdparty\BouncyCastle\Homepage.txt">
-      <Link>licenses\BouncyCastle\Homepage.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\thirdparty\BouncyCastle\license.txt">
-      <Link>licenses\BouncyCastle\license.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\thirdparty\BouncyCastle\licensedata.json">
-      <Link>licenses\BouncyCastle\licensedata.json</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\..\thirdparty\angular-gettext\Homepage.txt">
       <Link>licenses\AngularGettext\Homepage.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -341,8 +306,20 @@
       <Link>licenses\AngularGettext\licensedata.json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-	<Content Include="..\..\thirdparty\SharpCompress\licensedata.json">
+    <Content Include="..\..\thirdparty\SharpCompress\licensedata.json">
       <Link>licenses\SharpCompress\licensedata.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\thirdparty\aliyun-oss-csharp-sdk\licensedata.json">
+      <Link>licenses\aliyun-oss-csharp-sdk\licensedata.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\thirdparty\aliyun-oss-csharp-sdk\LICENSE.txt">
+      <Link>licenses\aliyun-oss-csharp-sdk\LICENSE.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\thirdparty\aliyun-oss-csharp-sdk\download.txt">
+      <Link>licenses\aliyun-oss-csharp-sdk\README.md</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
