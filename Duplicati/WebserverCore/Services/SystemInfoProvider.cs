@@ -19,9 +19,9 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 // DEALINGS IN THE SOFTWARE.
 using System.Globalization;
-using Duplicati.Library;
 using Duplicati.Library.AutoUpdater;
 using Duplicati.Library.Localization;
+using Duplicati.Library.Utility.Options;
 using Duplicati.Server;
 using Duplicati.Server.Database;
 using Duplicati.Server.Serialization.Interface;
@@ -53,6 +53,7 @@ public class SystemInfoProvider(IApplicationSettings applicationSettings, Connec
         "v1:subscribe:serversettings",
         "v1:subscribe:progress",
         "v1:subscribe:taskqueue",
+        "v1:subscribe:taskcompleted",
         "v1:subscribe:notifications",
 
         // "v1:subscribe:scheduler",
@@ -360,8 +361,8 @@ public class SystemInfoProvider(IApplicationSettings applicationSettings, Connec
             SupportedLocales = systeminfo.SupportedLocales,
             BrowserLocaleSupported = LocalizationService.IsCultureSupported(browserlanguage),
             TimeZones = systeminfo.TimeZones,
-            DefaultOAuthURL = OAuthContextSettings.ServerURL,
-            DefaultOAuthURLv2 = OAuthContextSettings.DUPLICATI_OAUTH_SERVICE_NEW,
+            DefaultOAuthURL = AuthIdOptionsHelper.DUPLICATI_OAUTH_SERVICE,
+            DefaultOAuthURLv2 = AuthIdOptionsHelper.DUPLICATI_OAUTH_SERVICE_NEW,
         };
     }
 }
