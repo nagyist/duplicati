@@ -29,6 +29,7 @@ namespace Duplicati.Library.Main.Strings
         public static string DownloadedFileSizeError(string filename, long actualsize, long expectedsize) { return LC.L(@"The file {0} was downloaded and had size {1} but the size was expected to be {2}", filename, actualsize, expectedsize); }
         public static string DeprecatedOptionUsedWarning(string optionname, string message) { return LC.L(@"The option --{0} has been deprecated: {1}", optionname, message); }
         public static string DuplicateOptionNameWarning(string optionname) { return LC.L(@"The option --{0} exists more than once. Please report this to the developers", optionname); }
+        public static string WrongDefaultBooleanOptionWarning(string optionname) { return LC.L(@"The option --{0} is a boolean option with a default value of true. Please report this to the developers", optionname); }
         public static string NoSourceFoldersError { get { return LC.L(@"No source folders specified for backup"); } }
         public static string SourceIsMissingError(string foldername) { return LC.L(@"Backup aborted since the source path {0} does not exist. Please verify that the source path exists, or remove the source path from the backup configuration, or set the allow-missing-source option.", foldername); }
         public static string SourceUnauthorizedError(string foldername) { return LC.L(@"Unauthorized to access source folder {0}, aborting backup", foldername); }
@@ -63,7 +64,7 @@ namespace Duplicati.Library.Main.Strings
         public static string ThrottleuploadShort { get { return LC.L(@"Max number of kilobytes to upload pr. second"); } }
         public static string DisablethrottleLong { get { return LC.L(@"Disable the throttling of upload and download speeds for this task. If there is a throttle set, it will be ignored when running this task."); } }
         public static string DisablethrottleShort { get { return LC.L(@"Disable throttling"); } }
-        public static string DisablethrottlebackendsLong(string option) { return LC.L(@"Disable the throttling of upload and download speeds for specific backends. If there is a throttle set, it will be ignore when running this task, if the backend is one of the specified backends. Multiple backends can be specified with a comma separator. This option has no effect if there is no throttle or if --{0} is set", option); }
+        public static string DisablethrottlebackendsLong(string option) { return LC.L(@"Disable the throttling of upload and download speeds for specific backends. If there is a throttle set, it will be ignored when running this task, if the backend is one of the specified backends. Multiple backends can be specified with a comma separator. This option has no effect if there is no throttle or if --{0} is set", option); }
         public static string DisablethrottlebackendsShort { get { return LC.L(@"Disable throttling for specific backends"); } }
         public static string NoencryptionLong { get { return LC.L(@"If you store the backups on a local disk, and prefer that they are kept unencrypted, you can turn of encryption completely by using this switch."); } }
         public static string NoencryptionShort { get { return LC.L(@"Disable encryption"); } }

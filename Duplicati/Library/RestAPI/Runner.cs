@@ -671,11 +671,10 @@ namespace Duplicati.Server
                         case DuplicatiOperation.Backup:
                             {
                                 var filter = ApplyFilter(backup, GetCommonFilter(databaseConnection));
-                                var sources =
-                                    (from n in backup.Sources
-                                     let p = SpecialFolders.ExpandEnvironmentVariables(n)
-                                     where !string.IsNullOrWhiteSpace(p)
-                                     select p).ToArray();
+                                var sources = backup.Sources
+                                    .Select(n => SpecialFolders.ExpandEnvironmentVariables(n))
+                                    .WhereNotNullOrWhiteSpace()
+                                    .ToArray();
 
                                 var r = controller.Backup(sources, filter);
                                 UpdateMetadataBase(databaseConnection, eventPollNotify, notificationUpdateService, backup, r);
@@ -1075,6 +1074,8 @@ namespace Duplicati.Server
 
             notificationUpdateService.IncrementLastDataUpdateId();
             eventPollNotify.SignalNewEvent();
+            if (!backup.IsTemporary)
+                eventPollNotify.SignalBackupListUpdate();
         }
 
         private static bool TestIfOptionApplies()
